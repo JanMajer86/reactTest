@@ -1,0 +1,28 @@
+.navigation-top {
+	display: flex;
+	align-items: center;
+	/* background-color: blanchedalmond; */
+	color: black;
+	border: 2px solid red;
+	border-radius: 2rem;
+}
+
+.link {
+	display: flex;
+	align-items: center;
+}
+
+/* .link > * {
+	border: 2px solid greenyellow; 
+	display: flex;
+} */
+
+.link-divider {
+	padding: 0 0.8rem;
+}
+.link-icon {
+	position: relative;
+	top: 3px;
+	color: #c4b5fd;
+	font-size: 1.4rem;
+}
