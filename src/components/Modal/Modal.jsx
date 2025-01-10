@@ -1,4 +1,6 @@
+import ContactForm from "../ContactForm/ContactForm";
 import "./Modal.css";
+import { TbXboxX } from "react-icons/tb";
 
 const Modal = ({ isModalOpen, setIsModalOpen }) => {
 	const closeModal = () => {
@@ -9,8 +11,10 @@ const Modal = ({ isModalOpen, setIsModalOpen }) => {
 			className={isModalOpen ? "modal-overlay modal-visible" : "modal-overlay"}
 		>
 			<div className="modal-window">
-				modal window
-				<button onClick={closeModal}>X</button>
+				<button onClick={closeModal} className="btn-close">
+					<TbXboxX />
+				</button>
+				<ContactForm />
 			</div>
 		</div>
 	);
