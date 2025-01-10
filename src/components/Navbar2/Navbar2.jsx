@@ -16,11 +16,13 @@ const Navbar2 = () => {
 			</span>
 			{links.map((link, index) => {
 				const id = uuid();
-				console.log(id);
+				// console.log(link.special);
 				const isLast = index + 1 === links.length;
 				return (
-					<div className="link" key={index}>
-						<a href={link.href}>{link.text}</a>
+					<div className="link" key={id}>
+						<a href={link.href} className={link.special && "link-special"}>
+							{link.text}
+						</a>
 						{isLast || (
 							<span className="link-divider">
 								<TbSlashes className="link-icon" />
