@@ -4,7 +4,7 @@ import { useState } from "react";
 import { v4 as uuid } from "uuid";
 import { TbChevronLeft, TbSlashes, TbChevronRight } from "react-icons/tb";
 
-const Navbar2 = () => {
+const Navbar2 = ({ openModal }) => {
 	const [links, setLinks] = useState([]);
 
 	useState(() => setLinks(navbarLinks), []);
@@ -16,11 +16,14 @@ const Navbar2 = () => {
 			</span>
 			{links.map((link, index) => {
 				const id = uuid();
-				// console.log(link.special);
 				const isLast = index + 1 === links.length;
 				return (
 					<div className="link" key={id}>
-						<a href={link.href} className={link.special && "link-special"}>
+						<a
+							href={link.href}
+							className={link.special && "link-special"}
+							onClick={link.special && openModal}
+						>
 							{link.text}
 						</a>
 						{isLast || (
